@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Glamour Prompt Studio</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0f0f14">
+
+</head>
+<body>
+
+<div class="container">
+    <h1>AI Glamour Prompt Studio</h1>
+
+    <select id="artist">
+        <option value="Japanese glamour model inspired look">Japanese Glamour Model</option>
+        <option value="Elegant mature Japanese beauty">Elegant Mature Beauty</option>
+        <option value="Petite yet voluptuous idol-like figure">Petite Voluptuous Idol</option>
+    </select>
+
+    <select id="pose">
+        <option value="sitting upright with confident posture">Sitting Upright</option>
+        <option value="half reclined with natural body arch">Half Reclined</option>
+        <option value="leaning forward slightly with soft gaze">Leaning Forward</option>
+    </select>
+
+    <select id="outfit">
+        <option value="wearing elegant lace lingerie">Lingerie</option>
+        <option value="artistic implied boudoir styling">Artistic Boudoir</option>
+    </select>
+
+    <select id="style">
+        <option value="cinematic lighting, shallow depth of field, DSLR 85mm lens">Cinematic</option>
+        <option value="hyper realistic skin texture, studio lighting">Realistic</option>
+        <option value="fine art oil painting texture">Fine Art Painting</option>
+    </select>
+
+    <textarea id="output" placeholder="Generated prompt will appear here..."></textarea>
+
+    <button id="generateBtn">Generate Prompt</button>
+    <button id="copyBtn">Copy Prompt</button>
+</div>
+
+<script src="assets/js/generator.js"></script>
+<script src="assets/js/app.js"></script>
+
+<script>
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js');
+}
+</script>
+
+</body>
+</html>
